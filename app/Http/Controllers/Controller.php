@@ -38,7 +38,7 @@ class Controller extends BaseController
 
             // Create a medium-sized image
             $medium = Image::make($requestImage->path());
-            $medium->resize(100,100, function ($constraint) {
+            $medium->resize(300,300, function ($constraint) {
                 $constraint->aspectRatio();
             });
 

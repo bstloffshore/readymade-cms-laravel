@@ -39,4 +39,10 @@ return [
 
     'manage_ss'=>'Manage Site Settings',
     'add_ss'=>'Create or Update Site Settings',
+
+    'lead_slider'=>'Lead Slider',
+    'add_lead_slider'=>'Add Lead Slider',
+    'edit_lead_slider'=>'Edit Lead Slider',
+    'list_lead_slider'=>'List Lead Slider',
+    'show_lead_slider'=>'Show Lead Slider',
 ];

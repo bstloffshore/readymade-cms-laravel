@@ -15,6 +15,9 @@ use App\Http\Controllers\SiteSettingsController;
 use App\Http\Controllers\GeneralSectionsController;
 use App\Http\Controllers\SectionsController;
 use App\Http\Controllers\SeoController;
+use App\Http\Controllers\LeadsController;
+use App\Http\Controllers\LeadsSlidersController;
+use App\Http\Controllers\ContactUsController;
 
 
 /*
@@ -67,5 +70,10 @@ Route::prefix('admin')->middleware(['basicAuth','auth','verified'])->group(funct
      Route::post('/updateGeneralSection', [GeneralSectionsController::class, 'update'])->name('general-sections.updateGeneralSection');
      Route::resource('sections', SectionsController::class);
      Route::post('/updateSection', [SectionsController::class, 'update'])->name('sections.updateSection');
+     Route::resource('leads', LeadsController::class);
+     Route::resource('lead-sliders', LeadsSlidersController::class);
+     Route::resource('contact-us', ContactUsController::class);
+
+
 });
 

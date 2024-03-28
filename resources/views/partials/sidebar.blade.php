@@ -28,7 +28,7 @@
                   <p>Dashboard</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item {{ request()->is('admin/leads') || request()->is('admin/lead-sliders') || request()->is('admin/contact-us*') ? 'menu-open' : '' }}">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-copy"></i>
                   <p>
@@ -39,19 +39,19 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
+                    <a href="{{ route('leads.index') }}" class="nav-link {{ request()->is('admin/leads') ? 'active' : '' }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Leads</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <a href="{{ route('lead-sliders.index') }}" class="nav-link {{ request()->is('admin/lead-sliders') ? 'active' : '' }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Lead Sliders</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/layout/boxed.html" class="nav-link">
+                    <a href="{{ route('contact-us.index') }}" class="nav-link {{ request()->is('admin/contact-us*') ? 'active' : '' }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Contact Page Leads</p>
                     </a>
